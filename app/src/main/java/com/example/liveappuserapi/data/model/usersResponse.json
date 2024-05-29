@@ -1,0 +1,72 @@
+[
+  {
+    "id": 6919644,
+    "name": "Digambar Kapoor",
+    "email": "digambar_kapoor@kuphal.test",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 6919642,
+    "name": "Devajyoti Khatri",
+    "email": "khatri_devajyoti@predovic.example",
+    "gender": "male",
+    "status": "inactive"
+  },
+  {
+    "id": 6919635,
+    "name": "Lal Malik DVM",
+    "email": "dvm_malik_lal@nitzsche.test",
+    "gender": "female",
+    "status": "active"
+  },
+  {
+    "id": 6919634,
+    "name": "Manisha Bhattathiri",
+    "email": "manisha_bhattathiri@lind.test",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 6919633,
+    "name": "Daevika Banerjee",
+    "email": "daevika_banerjee@sanford.example",
+    "gender": "female",
+    "status": "active"
+  },
+  {
+    "id": 6919632,
+    "name": "Rupinder Khanna",
+    "email": "khanna_rupinder@barrows-renner.test",
+    "gender": "female",
+    "status": "inactive"
+  },
+  {
+    "id": 6919631,
+    "name": "Mr. Agniprava Talwar",
+    "email": "agniprava_mr_talwar@donnelly-torphy.test",
+    "gender": "male",
+    "status": "active"
+  },
+  {
+    "id": 6919630,
+    "name": "Anasooya Nayar PhD",
+    "email": "nayar_phd_anasooya@adams.test",
+    "gender": "male",
+    "status": "inactive"
+  },
+  {
+    "id": 6919629,
+    "name": "Akshainie Mishra DO",
+    "email": "do_mishra_akshainie@koepp-hammes.example",
+    "gender": "female",
+    "status": "active"
+  },
+  {
+    "id": 6919628,
+    "name": "Daksha Arora",
+    "email": "arora_daksha@batz.example",
+    "gender": "male",
+    "status": "inactive"
+  }
+]
