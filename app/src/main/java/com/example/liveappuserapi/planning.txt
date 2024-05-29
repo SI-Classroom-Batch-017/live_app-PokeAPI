@@ -1,0 +1,7 @@
+
+Post Request implementieren
+-> Fake Daten
+
+UI Anbindung?
+-> User Daten aufnehmen
+

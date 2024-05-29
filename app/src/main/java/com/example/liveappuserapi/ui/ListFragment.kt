@@ -27,13 +27,16 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.loadUsers()
+        //Fake User posten
+        viewModel.postUser()
+
+        binding.refreshFAB.setOnClickListener {
+            viewModel.loadUsers()
+        }
 
         viewModel.users.observe(viewLifecycleOwner){
-
             val adapter = UserAdapter(it)
             binding.userRV.adapter = adapter
-
         }
     }
 

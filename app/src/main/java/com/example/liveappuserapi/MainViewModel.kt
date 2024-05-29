@@ -11,12 +11,17 @@ class MainViewModel() : ViewModel() {
 
     val users = repository.users
 
-    fun loadUsers(){
-       viewModelScope.launch {
-           repository.loadUsers()
-       }
+    fun loadUsers() {
+        viewModelScope.launch {
+            repository.loadUsers()
+        }
     }
 
+    fun postUser() {
+        viewModelScope.launch {
+            repository.postUser()
+        }
+    }
 
 
 }
