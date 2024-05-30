@@ -1,8 +1,10 @@
 package com.example.liveappuserapi.ui
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.liveappuserapi.R
 import com.example.liveappuserapi.data.model.User
 import com.example.liveappuserapi.databinding.UserItemBinding
 
@@ -26,6 +28,18 @@ class UserAdapter(
 
         holder.binding.userNameTV.text = user.name
         holder.binding.userMailTV.text = user.email
+
+        if(user.liked){
+            holder.binding.userCV.setCardBackgroundColor(holder.binding.root.context.getColor(R.color.green))
+        } else {
+            holder.binding.userCV.setCardBackgroundColor(Color.TRANSPARENT)
+
+        }
+
+        holder.binding.userCV.setOnClickListener {
+            user.liked = !user.liked
+            notifyDataSetChanged()
+        }
 
     }
 }

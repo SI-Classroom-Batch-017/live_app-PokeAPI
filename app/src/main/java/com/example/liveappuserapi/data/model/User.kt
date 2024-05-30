@@ -6,4 +6,9 @@ data class User (
     val email: String,
     val gender: String,
     val status: String,
+
+    //Extra Daten aus meiner App
+    var liked: Boolean = false,
 )
+
+

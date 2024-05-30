@@ -28,7 +28,7 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //Fake User posten
-        viewModel.postUser()
+//        viewModel.postUser()
 
         binding.refreshFAB.setOnClickListener {
             viewModel.loadUsers()
