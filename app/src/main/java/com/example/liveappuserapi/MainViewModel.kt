@@ -1,5 +1,6 @@
 package com.example.liveappuserapi
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.liveappuserapi.data.Repository
@@ -9,19 +10,23 @@ class MainViewModel() : ViewModel() {
 
     val repository = Repository()
 
-    val users = repository.users
+    val pokemonList = repository.pokemonList
 
-    fun loadUsers() {
-        viewModelScope.launch {
-            repository.loadUsers()
-        }
+    init {
+        loadPokemonList()
     }
 
-    fun postUser() {
-        viewModelScope.launch {
-            repository.postUser()
-        }
-    }
+    fun loadPokemonList() {
 
+        viewModelScope.launch {
+            try {
+                repository.loadPokemon()
+            } catch (ex : Exception){
+                Log.e("PokeApiCall", ex.message.toString())
+            }
+        }
+
+
+    }
 
 }

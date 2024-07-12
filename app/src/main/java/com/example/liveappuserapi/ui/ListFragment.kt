@@ -1,6 +1,7 @@
 package com.example.liveappuserapi.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +14,6 @@ import com.example.liveappuserapi.databinding.FragmentListBinding
 class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
-
     private val viewModel: MainViewModel by viewModels()
 
     override fun onCreateView(
@@ -24,20 +24,22 @@ class ListFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Fake User posten
-//        viewModel.postUser()
+        viewModel.pokemonList.observe(viewLifecycleOwner){ list ->
+            Log.d("pokemonList", list.toString())
 
-        binding.refreshFAB.setOnClickListener {
-            viewModel.loadUsers()
-        }
-
-        viewModel.users.observe(viewLifecycleOwner){
-            val adapter = UserAdapter(it)
+            val adapter = ItemAdapter(list)
             binding.userRV.adapter = adapter
+
+
         }
+
+
     }
+
+
 
 }
