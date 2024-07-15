@@ -8,5 +8,6 @@ data class PokemonDetailResponse (
 
 
 data class Sprites(
-    val front_default : String
+    val front_default : String,
+    val front_shiny: String
 )

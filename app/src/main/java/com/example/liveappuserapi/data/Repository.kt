@@ -18,7 +18,7 @@ class Repository {
     // 2 - Funktion die die Daten lädt und in die LiveData postet
     suspend fun loadPokemon() {
 
-        val response = PokeApi.apiService.loadPokemon()
+        val response = PokeApi.apiService.loadPokemon(100, 100)
 
         //Liste von dem Datentyp der LiveData, in diesem Format brauchen wir die Daten
         val resultList = mutableListOf<PokemonDetailResponse>()
